@@ -1,3 +1,3 @@
-# ionic-maps
+# ionic-maps capacitor mapbox 
 
-#create token mapbox
+# create token mapbox
