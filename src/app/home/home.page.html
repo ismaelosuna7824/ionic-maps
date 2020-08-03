@@ -1,0 +1,19 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar mode="ios" debounce=500 (ionChange)="search($event)" [value]="selectedAddress"></ion-searchbar>
+  <div id='map' class="map"></div>
+  <div class="placename" *ngIf="addresses.length > 0">
+    <ion-list lines="none" style="border-radius: 20px !important;">
+      <ion-item button *ngFor="let address of addresses" (click)="onSelect(address.address.name, address.address.lng, address.address.lat)">
+        <ion-icon name="pin"></ion-icon>
+        {{ address.address.name }}
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="location()">
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
