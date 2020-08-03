@@ -17,7 +17,7 @@ export class HomePage   {
   addresses: any[] = [];
   selectedAddress = null;
 
-  token = mapboxgl.accessToken = 'pk.eyJ1IjoiaXNtYWVsb3N1bmEiLCJhIjoiY2tkZHZtOWFwNGlwZzM2cXI4dzVjN2Y2NyJ9.SM0MKhO1hRGHbVrsLngbww';
+  token = mapboxgl.accessToken = 'token';
   constructor (private service: MapserviceService ) { }
   async ionViewWillEnter(){
     const position = await Geolocation.getCurrentPosition();
